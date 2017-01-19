@@ -4,18 +4,25 @@ import java.util.ArrayList;
 
 /**
  * Created by williammattern on 1/18/17.
+ * In collaboration with Gerrod Mozeik.
  */
+
 public class Inventory {
-    //tracks products
-    ArrayList products = new ArrayList(1);
-    double totalValueOfAllProducts;
+    static double totalValueOfAllProducts;
+    static ArrayList<Product> productsList = new ArrayList<Product>();
 
-    public double getTotalValueOfAllProducts() {
-        for (int i = 0; i < products.size(); i++){
-
+    static public void getTotalValueOfAllProducts(){
+        for (Product product: productsList){
+            totalValueOfAllProducts += product.getProductTotalValue();
         }
+        System.out.println(totalValueOfAllProducts);
+    }
 
-
-        return totalValueOfAllProducts;
+    public static void main(String[] args) {
+        Product gum = new Product(.5, "Gum", 1000);
+        Product cigarettes = new Product(10, "Cigs", 20);
+        productsList.add(gum);
+        productsList.add(cigarettes);
+        getTotalValueOfAllProducts();
     }
 }
