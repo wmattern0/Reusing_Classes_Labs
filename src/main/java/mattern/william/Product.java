@@ -14,7 +14,7 @@ public class Product {
         this.price = price;
         this.ID = ID;
         this.quantity = quantity;
-        Inventory.productsList.add(this);
+        addProductToProductList();
     }
 
     public void setID(String ID) {
@@ -43,5 +43,9 @@ public class Product {
 
     double getProductTotalValue(){
         return this.quantity * this.price;
+    }
+
+    public void addProductToProductList(){
+        Inventory.productsList.add(this);
     }
 }
