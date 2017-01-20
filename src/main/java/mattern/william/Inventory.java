@@ -11,11 +11,12 @@ public class Inventory {
     static double totalValueOfAllProducts;
     static ArrayList<Product> productsList = new ArrayList<Product>();
 
-    static public void getTotalValueOfAllProducts(){
+    static public double getTotalValueOfAllProducts(){
         for (Product product: productsList){
             totalValueOfAllProducts += product.getProductTotalValue();
         }
         System.out.println("Total value of products on hand: $" + totalValueOfAllProducts);
+        return totalValueOfAllProducts;
     }
 
     public static void getAllProductNames(){
