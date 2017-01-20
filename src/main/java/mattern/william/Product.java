@@ -14,6 +14,7 @@ public class Product {
         this.price = price;
         this.ID = ID;
         this.quantity = quantity;
+        Inventory.productsList.add(this);
     }
 
     public void setID(String ID) {

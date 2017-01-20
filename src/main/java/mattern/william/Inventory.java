@@ -15,14 +15,12 @@ public class Inventory {
         for (Product product: productsList){
             totalValueOfAllProducts += product.getProductTotalValue();
         }
-        System.out.println(totalValueOfAllProducts);
+        System.out.println("Total value of products on hand: $" + totalValueOfAllProducts);
     }
 
-    public static void main(String[] args) {
-        Product gum = new Product(.5, "Gum", 1000);
-        Product cigarettes = new Product(10, "Cigs", 20);
-        productsList.add(gum);
-        productsList.add(cigarettes);
-        getTotalValueOfAllProducts();
+    public static void getAllProductNames(){
+        for (Product product:productsList) {
+            System.out.println(product.getID());
+        }
     }
 }

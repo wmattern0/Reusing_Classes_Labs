@@ -23,6 +23,7 @@ public class MyList extends ArrayList {
     }
 
     public void fillList(int[] array) {
+        list.clear();
         for (Integer num : array) {
             list.add(num);
         }
@@ -49,12 +50,5 @@ public class MyList extends ArrayList {
             arr1[j] = arr1[j + 1];
         }
         arr1[j] = swap;
-    }
-
-    public void printArray(int[] arr1, int arrayLength) {
-        int h;
-        for (h = 0; h < arrayLength; h++) {
-            System.out.print(arr1[h] + " ");
-        }
     }
 }
