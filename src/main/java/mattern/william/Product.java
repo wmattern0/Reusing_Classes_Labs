@@ -17,26 +17,6 @@ public class Product {
         addProductToProductList();
     }
 
-    public void setID(String ID) {
-        this.ID = ID;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public void setQuantity(double quantity) {
-        this.quantity = quantity;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public double getQuantity() {
-        return quantity;
-    }
-
     public String getID() {
         return ID;
     }
